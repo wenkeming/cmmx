@@ -8,8 +8,15 @@ Apple Silicon is not supported.
 
 ## How to use
 
+1. Open a terminal window and navigate to the directory where you want to clone the repository.
+2. Type `git clone https://github.com/davidepedrazzi/CleanMyMacX.git` and press enter to download the repository to your computer.
+3. Type `cd CleanMyMacX` and press enter to navigate to the CleanMyMacX directory.
+4. Type `chmod u+x patch.py` and press enter to make the patch.py file executable.
+5. Type `sudo ./patch.py` or `sudo python3 ./patch.py` and press enter to run the tool.
+
+Expected output:
+
 ```
-$ chmod u+x patch.py
 $ sudo ./patch.py
 Patching /Applications/CleanMyMac-MAS.app/Contents/MacOS/CleanMyMac-MAS...
 Patching /Applications/CleanMyMac-MAS.app/Contents/Library/LoginItems/CleanMyMac-MAS Menu.app/Contents/MacOS/CleanMyMac-MAS Menu...
