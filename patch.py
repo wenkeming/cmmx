@@ -33,23 +33,23 @@ def main():
     with open(binary_path, 'rb+') as file:
         binary = bytearray(file.read())
 
-        # Function: -[CMMASLimitation isExceeded]
-        # Signature: 55 48 89 E5 48 8B 35 80 44 65 00 FF 15 5A C9 55 00 31 C9 48 85 C0 0F 9E C1 89 C8 5D C3
-        # Patch: 48 31 C0 C3
-
-        offset = binary.find(b'\x55\x48\x89\xE5\x48\x8B\x35\x80\x44\x65\x00\xFF\x15\x5A\xC9\x55\x00\x31\xC9\x48\x85\xC0\x0F\x9E\xC1\x89\xC8\x5D\xC3')
-
-        if offset == -1:
-            function_not_found('-[CMMASLimitation isExceeded]')
-            return
-
-        apply_patch(binary, offset, b'\x48\x31\xC0\xC3')
-
-        # Function: -[_TtC10CleanMyMac20ModulesListViewModel isUnlockFullVersionButtonHidden]
-        # Signature: 55 48 89 E5 E8 77 0E 00 00 0F B6 C0 83 E0 01 5D C3
+        # Function: -[CMMASActivationManager isAppActivated]
+        # Signature: 55 48 89 E5 41 57 41 56 41 55 41 54 53 50 49 89 FE 31 FF E8 E8 33 22 00
         # Patch: 48 C7 C0 01 00 00 00 C3
 
-        offset = binary.find(b'\x55\x48\x89\xE5\xE8\x77\x0E\x00\x00\x0F\xB6\xC0\x83\xE0\x01\x5D\xC3')
+        offset = binary.find(b'\x55\x48\x89\xE5\x41\x57\x41\x56\x41\x55\x41\x54\x53\x50\x49\x89\xFE\x31\xFF\xE8\xE8\x33\x22\x00')
+
+        if offset == -1:
+            function_not_found('-[CMMASActivationManager isAppActivated]')
+            return
+
+        apply_patch(binary, offset, b'\x48\xC7\xC0\x01\x00\x00\x00\xC3')
+
+        # Function: -[_TtC10CleanMyMac20ModulesListViewModel isUnlockFullVersionButtonHidden]
+        # Signature: 55 48 89 E5 E8 A7 0F 00 00 0F B6 C0 83 E0 01 5D C3
+        # Patch: 48 C7 C0 01 00 00 00 C3
+
+        offset = binary.find(b'\x55\x48\x89\xE5\xE8\xA7\x0F\x00\x00\x0F\xB6\xC0\x83\xE0\x01\x5D\xC3')
 
         if offset == -1:
             function_not_found('-[_TtC10CleanMyMac20ModulesListViewModel isUnlockFullVersionButtonHidden]')
@@ -66,10 +66,10 @@ def main():
         binary = bytearray(file.read())
 
         # Function: -[CMMASMenuLimitation isExceeded]
-        # Signature: 55 48 89 E5 48 8B 35 59 30 2F 00 FF 15 1B 76 28 00 31 C9 48 85 C0 0F 9E C1 89 C8 5D C3
+        # Signature: 55 48 89 E5 48 8B 35 9C F7 2F 00 FF 15 46 FC 28 00 31 C9 48 85 C0 0F 9E C1 89 C8 5D C3
         # Patch: 48 31 C0 C3
 
-        offset = binary.find(b'\x55\x48\x89\xE5\x48\x8B\x35\x59\x30\x2F\x00\xFF\x15\x1B\x76\x28\x00\x31\xC9\x48\x85\xC0\x0F\x9E\xC1\x89\xC8\x5D\xC3')
+        offset = binary.find(b'\x55\x48\x89\xE5\x48\x8B\x35\x9C\xF7\x2F\x00\xFF\x15\x46\xFC\x28\x00\x31\xC9\x48\x85\xC0\x0F\x9E\xC1\x89\xC8\x5D\xC3')
 
         if offset == -1:
             function_not_found('-[CMMASMenuLimitation isExceeded]')

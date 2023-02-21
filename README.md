@@ -1,8 +1,8 @@
 # CleanMyMac X
 
-Unlock all CleanMyMac X's features for free!
+Unlock (almost) all CleanMyMac X's features for free!
 
-Updated to version 4.12.2 (App Store) - Intel Chip
+Updated to version 4.12.4 (App Store) - Intel Chip
 
 Apple Silicon is not supported.
 
@@ -26,6 +26,13 @@ Re-signing /Applications/CleanMyMac-MAS.app...
 /Applications/CleanMyMac-MAS.app: satisfies its Designated Requirement
 Enjoy!
 ```
+
+## TODO
+
+- Parse Objective-C metadata
+- Unlock missing features
+- Hide 'Unlock Full Version' button in menu
+- Add support for Apple Silicon
 
 ## Read me
 
