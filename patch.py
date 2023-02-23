@@ -34,10 +34,10 @@ def main():
         binary = bytearray(file.read())
 
         # Function: -[CMMASActivationManager isAppActivated]
-        # Signature: 55 48 89 E5 41 57 41 56 41 55 41 54 53 50 49 89 FE 31 FF E8 E8 33 22 00
+        # Signature: 55 48 89 E5 41 57 41 56 41 55 41 54 53 50 49 89 FE 31 FF E8 38 51 22 00
         # Patch: 48 C7 C0 01 00 00 00 C3
 
-        offset = binary.find(b'\x55\x48\x89\xE5\x41\x57\x41\x56\x41\x55\x41\x54\x53\x50\x49\x89\xFE\x31\xFF\xE8\xE8\x33\x22\x00')
+        offset = binary.find(b'\x55\x48\x89\xE5\x41\x57\x41\x56\x41\x55\x41\x54\x53\x50\x49\x89\xFE\x31\xFF\xE8\x38\x51\x22\x00')
 
         if offset == -1:
             function_not_found('-[CMMASActivationManager isAppActivated]')
@@ -46,10 +46,10 @@ def main():
         apply_patch(binary, offset, b'\x48\xC7\xC0\x01\x00\x00\x00\xC3')
 
         # Function: -[_TtC10CleanMyMac20ModulesListViewModel isUnlockFullVersionButtonHidden]
-        # Signature: 55 48 89 E5 E8 A7 0F 00 00 0F B6 C0 83 E0 01 5D C3
+        # Signature: 55 48 89 E5 E8 C7 0F 00 00 0F B6 C0 83 E0 01 5D C3
         # Patch: 48 C7 C0 01 00 00 00 C3
 
-        offset = binary.find(b'\x55\x48\x89\xE5\xE8\xA7\x0F\x00\x00\x0F\xB6\xC0\x83\xE0\x01\x5D\xC3')
+        offset = binary.find(b'\x55\x48\x89\xE5\xE8\xC7\x0F\x00\x00\x0F\xB6\xC0\x83\xE0\x01\x5D\xC3')
 
         if offset == -1:
             function_not_found('-[_TtC10CleanMyMac20ModulesListViewModel isUnlockFullVersionButtonHidden]')
@@ -66,10 +66,10 @@ def main():
         binary = bytearray(file.read())
 
         # Function: -[CMMASMenuLimitation isExceeded]
-        # Signature: 55 48 89 E5 48 8B 35 9C F7 2F 00 FF 15 46 FC 28 00 31 C9 48 85 C0 0F 9E C1 89 C8 5D C3
+        # Signature: 55 48 89 E5 48 8B 35 65 1E 30 00 FF 15 A7 1D 29 00 31 C9 48 85 C0 0F 9E C1 89 C8 5D C3
         # Patch: 48 31 C0 C3
 
-        offset = binary.find(b'\x55\x48\x89\xE5\x48\x8B\x35\x9C\xF7\x2F\x00\xFF\x15\x46\xFC\x28\x00\x31\xC9\x48\x85\xC0\x0F\x9E\xC1\x89\xC8\x5D\xC3')
+        offset = binary.find(b'\x55\x48\x89\xE5\x48\x8B\x35\x65\x1E\x30\x00\xFF\x15\xA7\x1D\x29\x00\x31\xC9\x48\x85\xC0\x0F\x9E\xC1\x89\xC8\x5D\xC3')
 
         if offset == -1:
             function_not_found('-[CMMASMenuLimitation isExceeded]')
