@@ -1,20 +1,23 @@
 # CleanMyMac X
 
-Unlock (almost) all CleanMyMac X's features for free!
+免费解锁(几乎)所有CleanMyMac X的功能！
 
-Updated to version 4.12.6 (App Store) - Intel Chip
+更新至版本4.12.6(App Store)-英特尔芯片
 
-Apple Silicon is not supported.
+不支持 M 系列芯片。
 
-## How to use
+M 芯片的可参考 https://git.icrack.day/somebasj/CleanMyMacXCrack
 
-1. Open a terminal window and navigate to the directory where you want to clone the repository.
-2. Type `git clone https://github.com/davidepedrazzi/CleanMyMacX.git` and press enter to download the repository to your computer.
-3. Type `cd CleanMyMacX` and press enter to navigate to the CleanMyMacX directory.
-4. Type `chmod u+x patch.py` and press enter to make the patch.py file executable.
-5. Type `sudo ./patch.py` or `sudo python3 ./patch.py` and press enter to run the tool.
+## 如何使用
 
-Expected output:
+> 注意必须使用 python3
+
+1. 克隆本仓库到任意位置
+2. cd进克隆的目录 `CleanMyMacX`
+3. 更改 `patch.py` 的执行权限：`chmod u+x patch.py`
+4. 运行 `patch.py`：`sudo python ./patch.py`
+
+输出结果:
 
 ```
 $ sudo ./patch.py
@@ -31,9 +34,9 @@ Enjoy!
 
 - Parse Objective-C metadata
 - Unlock missing features
-- Hide 'Unlock Full Version' button in menu
-- Add support for Apple Silicon
+- 隐藏菜单中的 `解锁完整版` 按钮
+- 支持 Apple Silicon
 
-## Read me
+## 提示
 
-Before opening an issue, delete the app and re-download it from the App Store.<br>In most cases it will fix the problem.
+有问题建议删掉APP后从 `App Store` 重新下载，然后再执行。
